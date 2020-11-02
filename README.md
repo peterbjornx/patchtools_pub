@@ -10,6 +10,12 @@ from use of the software.
 Only public resources and publically available hardware were used by the author
 to produce this program.
 
+# Key material
+The program needs a 32 bit base key to work, the file cpukeys.c lists the
+various unique keys used by certain CPU models, and by careful analysis of the
+code you should be able to find these from encrypted patchfiles using a partial
+bruteforce attack.
+
 # Usage
 	patchtools [-dec] [-p <patch.dat>] [-i <config.txt>]
 
