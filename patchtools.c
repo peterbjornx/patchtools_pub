@@ -60,7 +60,7 @@ void usage( const char *reason ) {
 	"\t\t                  will use the path of the configuration \n"
 	"\t\t                  file to generate the output path.\n"
 	"\t\t\n"
-	"\t\t-p <config.txt>   Specifies the path of the config file  \n"
+	"\t\t-i <config.txt>   Specifies the path of the config file  \n"
 	"\t\t                  to use or extract. When extracting this\n"
 	"\t\t                  option is not required as the program  \n"
 	"\t\t                  will use the path of the patch file to \n"

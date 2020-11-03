@@ -1,4 +1,3 @@
-# patchtools
 Program for encrypting and decrypting Pentium II microcode patches.
 Written by Peter Bosch <public@pbx.sh>.
 
@@ -15,6 +14,11 @@ The program needs a 32 bit base key to work, the file cpukeys.c lists the
 various unique keys used by certain CPU models, and by careful analysis of the
 code you should be able to find these from encrypted patchfiles using a partial
 bruteforce attack.
+
+# MSRAM contents
+The MSRAM contents are scrambled, and to edit them you need to descramble them.
+An example implementation of this can be found at
+https://github.com/peterbjornx/p6tools
 
 # Usage
 	patchtools [-dec] [-p <patch.dat>] [-i <config.txt>]
@@ -37,7 +41,7 @@ bruteforce attack.
 		                  will use the path of the configuration
 		                  file to generate the output path.
 
-		-p <config.txt>   Specifies the path of the config file
+		-i <config.txt>   Specifies the path of the config file
 		                  to use or extract. When extracting this
 		                  option is not required as the program
 		                  will use the path of the patch file to
