@@ -18,6 +18,7 @@
 #define CPU_KEY_CASCADES_A 0x6b8a374e
 #define CPU_KEY_CASCADES_B 0x44d5346c
 #define CPU_KEY_MENDOCINO_A 0x4ef83ad6
+#define CPU_KEY_PARTLY_WORKS 0x41af33f6
 
 uint32_t cpukeys_get_base( uint32_t cpu_sig ) {
 
@@ -62,22 +63,22 @@ uint32_t cpukeys_get_base( uint32_t cpu_sig ) {
 			return CPU_KEY_COPPERMINE_B;
 		case 0x68a: /* coppermine D0 */
 			return CPU_KEY_COPPERMINE_C;
-//		case 0x690:  unknown  (Dothan)
-//		case 0x691: /* Timna */
-//			return 0x41af33f6; (integrity check fail)
-//		case 0x692:  unknown /* Timna */
+//		case 0x690:  /*unknown  (works only for  cpu00690_plat01_ver00000004_2000-02-06_PRD_BE8FFBD9.bin) */
+//		case 0x691: /* Timna (works only for cpu00691_plat01_ver00000002_2000-02-07_PRD_E6DA1028.bin) */
+//		case 0x692: /* Timna (works only for cpu00692_plat10_ver00000003_2000-03-22_PRD_B675019E.bin) */
+//			return CPU_KEY_PARTLY_WORKS;
 		case 0x694:  /*Banias */
 		case 0x695:  /*Banias */
 			return CPU_KEY_BANIAS_A;
-//		case 0x696: another key
+//		case 0x696: /* works only for cpu00696_plat10_ver00000001_2000-07-07_PRD_99C6BF9B.bin */
+//			return CPU_KEY_PARTLY_WORKS;
 		case 0x6a0: /* Cascades PIII xeon A0 */
 		case 0x6a1: /* Cascades PIII xeon A1 */
 			return CPU_KEY_CASCADES_A;
 //		case 0x6a4:  unknown /* Cascades PIII xeon B0 */
 		case 0x6b0:
+		case 0x6b1:
 			return CPU_KEY_CASCADES_B;
-//		case 0x6b1:  //partially works????
-//			return 0x44d5346c;
 		case 0x6b4: /* CPUID 0665H Medocino with PPGA/370 package */
 			return CPU_KEY_MENDOCINO_A;
 //		case 0x6d0:  unknown /* Dothan Processor A0 */

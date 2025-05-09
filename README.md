@@ -11,9 +11,9 @@ to produce this program.
 
 # Key material
 The program needs a 32 bit base key to work, the file cpukeys.c lists the
-various unique keys used by certain CPU models, and by careful analysis of the
-code you should be able to find these from encrypted patchfiles using a partial
-bruteforce attack.
+various unique keys used by certain CPU models. Some keys were recovered,
+some are still missing, likely due to unknown microcode update structure,
+changes in FPROM (constants used as encryption keys).
 
 # MSRAM contents
 The MSRAM contents are scrambled, and to edit them you need to descramble them.
