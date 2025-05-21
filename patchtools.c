@@ -224,9 +224,9 @@ void create_patch( void ) {
 	/* Get the config filename */
 	strncpy( fmt_buf, config_path, sizeof fmt_buf );
 	config_fn = basename( fmt_buf );
+	config_fn = strdup(config_fn);
 
 	/* Get the patch name */
-	strncpy( fmt_buf, config_fn, sizeof fmt_buf );
 	patch_name = strtok( config_fn, "." );
 	patch_name = strdup( patch_name );
 

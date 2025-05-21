@@ -6,6 +6,7 @@ SRCS_C =\
 	dump_patch.c \
 	file_io.c \
 	filefmt.c
+CFLAGS +=-g
 
 patchtools: $(SRCS_C) opt_cipher.o
 
